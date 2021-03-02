@@ -96,7 +96,7 @@ console.log(articleTagsArray);
 for(let tag of articleTagsArray){
 	console.log(tag);
       /* generate HTML of the link */
-const linkHTML = '<li><a href="#tag-' + tag + '"><span>' + tag + ', ' + '</span></a></li>';
+const linkHTML = '<li><a href="#tag-' + tag + '"><span>' + tag + ' ' + '</span></a></li>';
       /* add generated code to html variable */
 html = html + linkHTML;
     /* END LOOP: for each tag */
@@ -141,7 +141,7 @@ function tagClickHandler(event){
 
 function addClickListenersToTags(){
   /* find all links to tags */
-const linksToTags = document.querySelectorAll('.list a');
+const linksToTags = document.querySelectorAll('.post-tags a');
   /* START LOOP: for each link */
   	for(let linkToTag of linksToTags){
     /* add tagClickHandler as event listener for that link */
@@ -225,6 +225,8 @@ const linksToAuthors = document.querySelectorAll('.post-author a');
 }
 }
 addClickListenersToAuthor();
+
+
 
 
 
